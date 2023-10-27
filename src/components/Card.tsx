@@ -13,36 +13,36 @@ export const CarCard : React.FC<CardProps> = ({ car }) => {
     <div className={styles.cardWrapper}>
       <Text variant="bates">{car.bodyType}</Text>
       <Flex extend={{
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          flexDirection: 'row',
-          margin: 0,
-        }}>
-          <Text variant="amundsen" extend={{ margin: '0', padding: '0' }}>{car.modelName}</Text>
-          <Spacer />
-          <Text variant="bates" subStyle="inline-link" extend={{ margin: '0' }}>{car.modelType}</Text>
-        </Flex>
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        flexDirection: 'row',
+        margin: 0,
+      }}>
+        <Text variant="amundsen" extend={{ margin: '0', padding: '0' }}>{car.modelName}</Text>
         <Spacer />
-        <Image
-          src={car.imageUrl}
-          alt={car.modelName}
-          height={200}
-          width={250}
-        />
+        <Text variant="bates" subStyle="inline-link" extend={{ margin: '0' }}>{car.modelType}</Text>
+      </Flex>
+      <Spacer />
+      <Image
+        src={car.imageUrl}
+        alt={car.modelName}
+        height={200}
+        width={250}
+      />
+      <Spacer />
+      <Flex extend={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+      }}>
+        <Link>
+          {'SHOP >'}
+        </Link>
         <Spacer />
-        <Flex extend={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'row',
-        }}>
-          <Link>
-            {'SHOP >'}
-          </Link>
-          <Spacer />
-          <Link>
-            {'LEARN >'}
-          </Link>
-        </Flex>
+        <Link>
+          {'LEARN >'}
+        </Link>
+      </Flex>
     </div>
   );
 };
